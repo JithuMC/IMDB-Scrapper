@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initaial-scale=1.0">
+	<title>Xtract-IMDB Scrapper</title>
+  <link rel="stylesheet"	href="{{ url_for('static', filename='styles.css')}}">
+    <script>
+        function validateForm() {
+          var x = document.forms["myForm"]["link"].value;
+           if (x == "" || x == null) {
+            alert("Please enter a URL");
+            return false;
+            }
+        }
+        </script>
+</head>
+<body>
+  <nav>
+		<div class="logo">
+			<p>Xtract</p>
+		</div>
+		<ul>
+			<li><a href="" class="active">home</a></li>
+			<li><a href="">about</a></li>
+		</ul>
+	</nav>
+    <form name="myForm" action="{{ url_for("gfg")}}" method="post" onsubmit="return validateForm()" required>
+        <div class="wrapper">
+            <input type="text" class="input" name="link" placeholder="Paste the IMDB seies URL?">
+              <input type="submit" class="search" value="Search"> 
+        </div>
+    </form>
+</body>
+</html>

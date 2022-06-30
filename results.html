@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>result</title>
+  <style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+    </style>
+</head>
+<body>
+  <h3>Episode List</h3>
+    <table id="customers">
+      <tr>
+        <th>SEASON</th>
+        <th>EPISODE</th>
+        <th>TITLE</th>
+        <th>RATING</th>
+      </tr>
+      {% for items in total %}
+        <tr>
+          <td>{{items[0]}}</td>
+          <td>{{items[1]}}</td>
+          <td>{{items[2]}}</td>
+          <td>{{items[3]}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+
+ <a href="/">home</a>
+</body> 
+</html>
