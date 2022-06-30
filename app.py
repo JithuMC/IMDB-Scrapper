@@ -30,7 +30,7 @@ def gfg():
             sns_no=sns.text
             total_sns_no.append(sns_no)
     
-    total_sns() 
+    total_sns() #calling the function
 
     #finding the length of the list to find the total season count and adding one to it for iterating over the seasons
     total_seasons=len(total_sns_no)+1 
